@@ -19,9 +19,13 @@ Sub VerificarEAlterarCores()
       
     End If
     
+  
+    Application.Wait (Now + TimeValue("0:00:01"))
       
     If celulaG6.Interior.Color <> RGB(255, 255, 255) Then
              celulaG6.Interior.ColorIndex = xlNone
         celulaH6.Interior.Color = RGB(255, 0, 0)
         
         End If
+    
+End Sub
