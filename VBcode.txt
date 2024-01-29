@@ -3,6 +3,8 @@ Sub VerificarEAlterarCores()
     Dim celulaH6 As Range
     Dim celulaG6 As Range
     
+    While True
+     Application.Wait (Now + TimeValue("0:00:01"))
     ' Define a planilha onde você deseja realizar as operações
     Set ws = ThisWorkbook.Sheets("Plan1")
     
@@ -20,12 +22,24 @@ Sub VerificarEAlterarCores()
     End If
     
   
-    Application.Wait (Now + TimeValue("0:00:01"))
+    Application.Wait (Now + TimeValue("0:00:02"))
       
     If celulaG6.Interior.Color <> RGB(255, 255, 255) Then
              celulaG6.Interior.ColorIndex = xlNone
         celulaH6.Interior.Color = RGB(255, 0, 0)
         
         End If
+        
+        
+           
+        
+    Wend
+        
+        
+        
+        
+        
+        
+        
     
 End Sub
