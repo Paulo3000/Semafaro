@@ -1,0 +1,27 @@
+Sub VerificarEAlterarCores()
+    Dim ws As Worksheet
+    Dim celulaH6 As Range
+    Dim celulaG6 As Range
+    
+    ' Define a planilha onde você deseja realizar as operações
+    Set ws = ThisWorkbook.Sheets("Plan1")
+    
+    ' Define as células H6 e G6
+    Set celulaH6 = ws.Range("H6")
+    Set celulaG6 = ws.Range("G6")
+    
+    ' Verifica se a célula H6 está pintada
+    If celulaH6.Interior.Color <> RGB(255, 255, 255) Then ' Altere RGB(255, 255, 255) para a cor que você está usando em H6
+        ' Se H6 estiver pintada, remove a cor e pinta a célula G6
+        celulaH6.Interior.ColorIndex = xlNone
+        celulaG6.Interior.Color = RGB(255, 0, 0) ' Altere RGB(255, 0, 0) para a cor que você deseja para G6
+        
+      
+    End If
+    
+      
+    If celulaG6.Interior.Color <> RGB(255, 255, 255) Then
+             celulaG6.Interior.ColorIndex = xlNone
+        celulaH6.Interior.Color = RGB(255, 0, 0)
+        
+        End If
